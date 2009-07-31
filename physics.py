@@ -70,7 +70,7 @@ class StaticBox(object):
         groundShapeDef = Box2D.b2PolygonDef()
  
         # The extents are the half-widths of the box.
-        groundShapeDef.SetAsBox(width/2, height/2)
+        groundShapeDef.SetAsBox(width/2.0, height/2.0)
  
         # Add the ground shape to the ground body.
         groundBody.CreateShape(groundShapeDef)
@@ -85,7 +85,7 @@ class DynamicBox(object):
 	 
 	# Define another box shape for our dynamic body.
 	shapeDef = Box2D.b2PolygonDef()
-	shapeDef.SetAsBox(width/2, height/2)
+	shapeDef.SetAsBox(width/2.0, height/2.0)
 	 
 	# Set the box density to be non-zero, so it will be dynamic.
 	shapeDef.density = 1

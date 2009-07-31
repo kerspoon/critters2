@@ -11,7 +11,7 @@ class Dummy(object):
 
       def initilize(self):
             box = physics.StaticBox()
-            box.initilize(16, 2, 32, 4)
+            box.initilize(16, -5, 32, 10)
 
             self.physics = physics.DynamicBox()
             self.physics.initilize(10, 26, 1, 1)
@@ -26,11 +26,11 @@ class Dummy(object):
             pass 
 
       def update(self,time_passed):
-            # self.renderable.location = convert_to_screen(self.physics.body.position)
+            self.renderable.location = convert_to_screen(self.physics.body.position)
             self.renderable.angle = self.physics.body.angle
             self.renderable.render()
-            # print self.renderable.location.x, self.renderable.location.y
-            print self.physics.body.position
+            # print self.renderable.location.x, self.renderable.location.y,
+            # print self.physics.body.position
 
 def convert_to_screen(point):
       px, py = point
