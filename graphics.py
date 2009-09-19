@@ -34,7 +34,7 @@ def Image(filename):
 class Bitmap(object):
       def __init__(self, location=Vector(0,0), angle=0, filename="bluecreep.png"):
             self._base_image = Image(filename)
-            self.location = location
+            self.location = Vector(location)
             self.angle = angle
             self.screen = Manager.screen
 
@@ -54,3 +54,18 @@ class Bitmap(object):
       def render(self):
             self.screen.blit(self.image, self.draw_location)
 
+class Rect(object):
+      """http://www.pygame.org/docs/ref/draw.html
+         pygame.draw.rect(Surface, color, Rect, width=0): return Rect
+         pygame.surface.fill(color, rect)
+         
+      """
+      def __init__(self, location, width, height, color):
+            self.color = color
+            self.rect = location[0], location[1], width, height
+            self.screen = Manager.screen
+            print self.color, self.rect
+
+      def render(self):
+            self.screen.fill(self.color, self.rect)
+            # pygame.draw.rect(self.screen, self.color, self.rect)

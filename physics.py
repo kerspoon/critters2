@@ -38,6 +38,7 @@ class Manager(object):
 
         self.counter = 0 
         self.update_time = 1000.0/60 # 16.666 
+        
 
     def update(self,time_passed):
         # Prepare for simulation. Typically we use a time step of 1/60 of a

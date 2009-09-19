@@ -8,9 +8,6 @@ import custom
 TODO
   > get entity.Manager working 
 
-  > re-get basic text based physics working
-  > get physics to control graphics.Bitmap through entity
-
   > add input class
 
   > add lipy as a process so I can change and add thins automatically
@@ -23,6 +20,9 @@ TODO
 
   //install Box2d and get helloworld working//
   //get basic physics working in text mode//
+  //re-get basic text based physics working//
+  //get physics to control graphics.Bitmap through entity//
+
 """
 
 
@@ -103,5 +103,3 @@ def main():
             continue
       print "done"
 main()
-
-
