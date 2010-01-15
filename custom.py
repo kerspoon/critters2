@@ -7,7 +7,7 @@ import physics
 
 class Dummy(object):
       name = "dummy"
-      priorities = (9999,1)
+      priorities = (9999,100000)
 
       def initilize(self):
             w = Graphics.SCREEN_WIDTH - 10 

@@ -5,8 +5,17 @@ import entity
 import custom
 
 """
+BUGS
+
+  > there is a gap between the graphical sprites when under physics. 
+
 TODO
-  > get entity.Manager working 
+
+  > add render order, or depth. 
+
+  > add an easy way to input new entity instances at start up
+
+  > deal with collision, i.e. collision responce
 
   > add input class
 
@@ -22,6 +31,7 @@ TODO
   //get basic physics working in text mode//
   //re-get basic text based physics working//
   //get physics to control graphics.Bitmap through entity//
+  //get entity.Manager working//
 
 """
 

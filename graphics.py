@@ -67,5 +67,5 @@ class Rect(object):
             print self.color, self.rect
 
       def render(self):
-            self.screen.fill(self.color, self.rect)
-            # pygame.draw.rect(self.screen, self.color, self.rect)
+            # self.screen.fill(self.color, self.rect)
+            pygame.draw.rect(self.screen, self.color, self.rect)
