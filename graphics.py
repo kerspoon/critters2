@@ -2,9 +2,6 @@
 import pygame 
 import sys
 from vec2d import vec2d as Vector
-# from graphics import Manager as Graphics
-# from graphics import Bitmap
-
 
 class Manager(object):
       name = "graphics-manager"

@@ -4,38 +4,6 @@ import physics
 import entity
 import custom
 
-"""
-BUGS
-
-  > there is a gap between the graphical sprites when under physics. 
-
-TODO
-
-  > add render order, or depth. 
-
-  > add an easy way to input new entity instances at start up
-
-  > deal with collision, i.e. collision responce
-
-  > add input class
-
-  > add lipy as a process so I can change and add thins automatically
-
-  > add game_states or something  
-
-  > add neural net
-  > add genetic algorithm
-  > make ga control neural net 
-
-  //install Box2d and get helloworld working//
-  //get basic physics working in text mode//
-  //re-get basic text based physics working//
-  //get physics to control graphics.Bitmap through entity//
-  //get entity.Manager working//
-
-"""
-
-
 class Ping(object):
       name = "ping"
       priorities = (99999,99999)
