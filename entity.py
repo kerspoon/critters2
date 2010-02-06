@@ -10,8 +10,8 @@ class Manager(object):
 
       def initilize(self):
             self.entities = []
-            # self.add(read_Entity("DynamicBox, 15, 26, 1, 1, bluecreep.png"))
-            self.add(read_Entity("DynamicBox, 1, 32, 1, 1, bluecreep.png"))
+            self.add(read_Entity("DynamicBox, 15, 26, 1, 1, bluecreep.png"))
+            # self.add(read_Entity("DynamicBox, 1, 32, 1, 1, bluecreep.png"))
             self.add(read_Entity("StaticBox, 16, 0, 32, 10, 255, 100, 0"))
 
       def update(self, time_passed):
@@ -40,8 +40,6 @@ def gbox_to_pbox(gx, gy, gw, gh):
       pw, ph = gw / 16.0 , gh / 16.0
       px, py = px + pw/2.0 , py + ph/2.0
       return px, py, pw, ph
-
-
 
 def read_Entity(text):
       entity = None
@@ -77,14 +75,13 @@ class DynamicBox(object):
             self.renderable = Bitmap(rect[:2], 0, filename)
 
       def update(self, time_passed):
-
-            rect = list(self.physics.body.position) + self.physics_size
+            rect = list(self.physics.position) + self.physics_size
             #            print "rect ", rect 
             self.renderable.location = Vector(pbox_to_gbox(*rect)[:2])
-            self.renderable.angle = self.physics.body.angle
+            self.renderable.angle = self.physics.angle
             self.renderable.render()
-            # print self.renderable.location.x, self.renderable.location.y,
-            # print self.physics.body.position
+            print self.renderable.location.x, self.renderable.location.y,
+            print self.physics.position
 
 
 class StaticBox(object):

@@ -99,3 +99,12 @@ class DynamicBox(object):
 	 
 	# Now tell the dynamic body to compute it's mass properties base on its shape.
 	self.body.SetMassFromShapes()
+
+    def get_position(self):
+        return self.body.position.x, self.body.position.y
+
+    def get_angle(self):
+        return self.body.angle
+
+    position = property(get_position)
+    angle = property(get_angle)
