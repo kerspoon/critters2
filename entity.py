@@ -10,13 +10,16 @@ class Manager(object):
 
       def initilize(self):
             self.entities = []
-            self.add(read_Entity("DynamicBox, 15, 26, 1, 1, bluecreep.png"))
+            # self.add(read_Entity("DynamicBox, 15, 26, 1, 1, bluecreep.png"))
             # self.add(read_Entity("DynamicBox, 1, 32, 1, 1, bluecreep.png"))
-            self.add(read_Entity("StaticBox, 16, 0, 32, 10, 255, 100, 0"))
+            # self.add(read_Entity("StaticBox, 16, 0, 32, 10, 255, 100, 0"))
 
       def update(self, time_passed):
             for item in self.entities:
                   item.update(time_passed)
+
+      def string_add(self, entity):
+            self.entities.append(read_Entity(entity))
 
       def add(self, entity):
             self.entities.append(entity)

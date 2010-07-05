@@ -51,8 +51,27 @@ Entity
 Physics
 ----
 
+type Angle -> Float(0,360)
+
+class DynamicBox : Box
+  var friction  :: Float(0,1)
+  var centre    :: Point
+  var size      :: Vector
+  var angle     :: Angle
+  func __init__ :: Point, Vector -> DynamicBox
+
+class StaticBox
+  var centre    :: Point
+  var size      :: Vector
+  var angle     :: Angle
+  func __init__ :: Point, Vector -> StaticBox
+
 Graphics
 ----
 
-
-box(renderable, physicsobject)
+class Bitmap
+  var centre    :: Point
+  var size      :: Vector
+  var angle     :: Angle
+  const func __init__ :: Str, Screen -> Bitmap
+  func render   :: ->
